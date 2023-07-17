@@ -27,31 +27,36 @@ class _NewsFeedPageState extends State<NewsFeedPage> {
       appBar: AppBar(
         title: Text('News Feed'),
       ),
-      body: OrientationBuilder(
-        builder: (context, orientation) {
-          _currentOrientation = orientation;
-          return GridView.builder(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: _currentOrientation == Orientation.portrait ? 1 : 2,
-            ),
-            itemCount: articles.length,
-            itemBuilder: (context, index) {
-              return _buildArticleItem(articles[index]);
-            },
-          );
-        },
+      body: Container(
+        padding: EdgeInsets.symmetric(horizontal: 80.0),
+        child: OrientationBuilder(
+          builder: (context, orientation) {
+            _currentOrientation = orientation;
+            return GridView.builder(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: _currentOrientation == Orientation.portrait ? 1 : 2,
+                childAspectRatio: 1.0,
+              ),
+              itemCount: articles.length,
+              itemBuilder: (context, index) {
+                return _buildArticleItem(articles[index]);
+              },
+            );
+          },
+        ),
       ),
     );
   }
 
   Widget _buildArticleItem(Article article) {
     return Container(
-      height: 100,
-      width: 100,
-      padding: EdgeInsets.only(left: 50,right: 50,bottom: 20),
-      child: Image.network(
-        article.thumbnailUrl,
-        fit: BoxFit.cover,
+      padding: EdgeInsets.all(8.0),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(8.0),
+        child: Image.network(
+          article.thumbnailUrl,
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }
