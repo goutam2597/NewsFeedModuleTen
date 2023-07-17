@@ -1,16 +1,2 @@
-# module_ten_news_feed
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot_20230717_235819](https://github.com/goutam2597/NewsFeedModuleTen/assets/134217195/f697e1af-8f11-473d-8df6-5ddd5e872746)
+![Screenshot_20230717_235810](https://github.com/goutam2597/NewsFeedModuleTen/assets/134217195/8a829083-b777-488a-87b1-d911cc73aefe)
